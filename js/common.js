@@ -1,5 +1,24 @@
 'use strict'
 
+const fadeIn = (el, timeout, display) => {
+  el.style.opacity = 0
+  el.style.display = display || 'block';
+  el.style.transition = `opacity ${timeout}ms`
+  setTimeout(() => {
+    el.style.opacity = 1
+  }, 10)
+}
+const fadeOut = (el, timeout) => {
+  el.style.opacity = 1
+  el.style.transition = `opacity ${timeout}ms`
+  el.style.opacity = 0
+
+  setTimeout(() => {
+    el.style.display = 'none'
+  }, timeout)
+}
+
+
 const onScrollHeader = () => {
 
  	const header = document.querySelector('.header__top')
@@ -274,7 +293,8 @@ modal_button_active_phone.forEach(e => {
 	e.addEventListener('click', function(event) {
 		event.preventDefault()
 
-		modal_phone.classList.add('active')
+		// modal_phone.classList.add('active')
+		fadeIn(modal_phone, 500, 'flex');
 	})
 })
 
@@ -282,7 +302,9 @@ modal_close.forEach(e => {
 	e.addEventListener('click', function(event) {
 		event.preventDefault()
 
-		e.closest('.modal_overlay').classList.remove('active')
+		// e.closest('.modal_overlay').classList.remove('active')
+
+		fadeOut(e.closest('.modal_overlay'), 500);
 	})
 })
 
@@ -290,7 +312,7 @@ modal_close_button.forEach(e => {
 	e.addEventListener('click', function(event) {
 		event.preventDefault()
 
-		e.closest('.modal_overlay').classList.remove('active')
+		fadeOut(e.closest('.modal_overlay'), 500);
 	})
 })
 
@@ -426,10 +448,16 @@ if(js_form) {
 			if(e.querySelector('.error-message') == null) {
 
 				e.querySelectorAll('input').forEach(input => input.value = "");
-				modal_message.classList.remove('active')
+				// modal_message.classList.remove('active')
 				
-				modal_phone.classList.remove('active')
-				modal_success.classList.add('active')
+				// modal_phone.classList.remove('active')
+				// modal_success.classList.add('active')
+
+				modal_message.getAttribute('style', 'display: none;')
+				// fadeOut(modal_message, 500);
+				fadeOut(modal_phone, 500);
+				
+				fadeIn(modal_success, 500, 'flex');
 			}
 
 		});
@@ -535,6 +563,19 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
             behavior: 'smooth'
         })
     })
+})
+
+lightGallery(document.getElementById('lightgallery'), {
+        plugins: [lgZoom],
+        // licenseKey: 'your_license_key',
+        speed: 500,
+		// counter: false,
+		captions: false,
+		download: false,
+		// enableSwipe: false,
+		// enableDrag: false,
+		// pager: false,
+		// controls: false,
 })
 
 onScrollHeader()

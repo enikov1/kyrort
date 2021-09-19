@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Home</title>
+    <meta name="description" content="Описание">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <meta property="og:url" content="/">
+    <meta property="og:title" content="Title">
+    <meta property="og:description" content="description">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img/img.jpg">
     <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
@@ -307,17 +316,10 @@
       </div>
       <div class="gallery__bottom">
         <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="img/gallery/item1.jpg" alt="image">
-              <p class="text">Все дома строятся в едином стиле, присущем курортам южной части Европы.</p>
-            </div>
-            <div class="swiper-slide"><img src="img/gallery/item2.jpg" alt="image">
-              <p class="text">Все дома строятся в едином стиле, присущем курортам южной части Европы.</p>
-            </div>
-            <div class="swiper-slide"><img src="img/gallery/item3.jpg" alt="image">
-              <p class="text">Все дома строятся в едином стиле, присущем курортам южной части Европы.</p>
-            </div>
-          </div>
+          <div class="swiper-wrapper" id="lightgallery"><a class="swiper-slide" data-src="img/gallery/item1.jpg"><img src="img/gallery/item1.jpg" alt="image">
+              <p class="text">Все дома строятся в едином стиле, присущем курортам южной части Европы.</p></a><a class="swiper-slide" data-src="img/gallery/item2.jpg"><img src="img/gallery/item2.jpg" alt="image">
+              <p class="text">Все дома строятся в едином стиле, присущем курортам южной части Европы.</p></a><a class="swiper-slide" data-src="img/gallery/item3.jpg"><img src="img/gallery/item3.jpg" alt="image">
+              <p class="text">Все дома строятся в едином стиле, присущем курортам южной части Европы.</p></a></div>
         </div>
       </div>
     </section>
@@ -518,7 +520,7 @@
         </nav>
       </div>
     </div>
-    <div class="modal_overlay modal_phone" id="modal_phone">
+    <div class="modal_overlay modal_phone" id="modal_phone" style="display: none">
       <div class="modal_wrap">
         <button class="modal_close" type="button"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M2 2L28.5 28.5M28.5 2L2 28.5" stroke="#B26855" stroke-width="3" stroke-linecap="round"/>
@@ -548,7 +550,7 @@
         </form>
       </div>
     </div>
-    <div class="modal_overlay" id="modal_success">
+    <div class="modal_overlay" id="modal_success" style="display: none">
       <div class="modal_wrap modal_wrap_success">
         <button class="modal_close" type="button"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M2 2L28.5 28.5M28.5 2L2 28.5" stroke="#B26855" stroke-width="3" stroke-linecap="round"/>
@@ -565,6 +567,9 @@
     <script src="libs/scrollreveal/scrollreveal.js" defer></script>
     <script src="libs/scrollspy/scrollspy.js" defer></script>
     <script src="libs/swiper/swiper-bundle.min.js" defer></script>
+    <script src="libs/lightgallery/lightgallery.min.js" defer></script>
+    <script src="libs/lightgallery/lg-zoom.min.js" defer></script>
+    <script src="libs/lightgallery/lg-thumbnail.min.js" defer></script>
     <script src="js/common.js" defer></script>
     <link rel="stylesheet" href="css/libs.min.css">
   </body>

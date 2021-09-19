@@ -298,6 +298,7 @@ body {
 
 .footer__top_left .title-h2 {
   margin-bottom: 3.875rem;
+  color: #474A51;
 }
 
 .footer__top_left .block_list {
@@ -400,7 +401,11 @@ body {
 .footer__bottom {
   background-color: white;
   padding-top: 2.625rem;
-  padding-bottom: 3.375rem;
+  padding-bottom: 2.625rem;
+}
+
+.footer__bottom .logo {
+  margin-top: 0.25rem;
 }
 
 .footer__bottom .container {
@@ -652,6 +657,11 @@ body {
           align-items: center;
 }
 
+.header__bottom_control .button_play:hover .button_play__overlay {
+  -webkit-animation: pulse 1500ms;
+          animation: pulse 1500ms;
+}
+
 .header__bottom_control .button_play__overlay {
   width: 4.8125rem;
   height: 4.8125rem;
@@ -815,10 +825,6 @@ body {
   z-index: 16;
   background-color: #433632;
   overflow-y: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -1166,6 +1172,36 @@ body {
   border-color: #CC7676;
 }
 
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(178, 104, 85, 0.7);
+            box-shadow: 0 0 0 0 rgba(178, 104, 85, 0.7);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 0.9375rem rgba(178, 104, 85, 0);
+            box-shadow: 0 0 0 0.9375rem rgba(178, 104, 85, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(178, 104, 85, 0);
+            box-shadow: 0 0 0 0 rgba(178, 104, 85, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(178, 104, 85, 0.7);
+            box-shadow: 0 0 0 0 rgba(178, 104, 85, 0.7);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 0.9375rem rgba(178, 104, 85, 0);
+            box-shadow: 0 0 0 0.9375rem rgba(178, 104, 85, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(178, 104, 85, 0);
+            box-shadow: 0 0 0 0 rgba(178, 104, 85, 0);
+  }
+}
+
 .gallery {
   background-color: #433632;
   padding-top: 5.75rem;
@@ -1248,6 +1284,12 @@ body {
 
 .gallery__bottom .swiper-slide-active .text {
   opacity: 1;
+}
+
+.gallery__bottom a {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .gallery__bottom img {
@@ -1565,7 +1607,7 @@ body {
 
 .info__list_item .text {
   color: var(--c-text2);
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 .info__right_image {
@@ -1727,7 +1769,7 @@ body {
 }
 
 .investment .list__text {
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 152%;
   color: #B5B5B5;
@@ -1775,7 +1817,7 @@ body {
 }
 
 .investment__left .text {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #BCBCC1;
   line-height: 152%;
   margin-bottom: 2.5rem;
@@ -1807,7 +1849,7 @@ body {
 }
 
 .investment__right .slide2 {
-  margin-top: 7.875rem;
+  margin-top: 11.75rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1821,15 +1863,15 @@ body {
 
 .investment__right .slide2 .title {
   margin-bottom: 0.6875rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
   color: white;
   line-height: 152%;
-  max-width: 11.25rem;
+  max-width: 13.125rem;
 }
 
 .investment__right .slide2 .text {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #BCBCC1;
   line-height: 152%;
   max-width: 33.125rem;
@@ -2108,7 +2150,7 @@ body {
 }
 
 .layouts__item_bottom .right > span {
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 120%;
   color: #A5A5A5;
   margin-bottom: 1.125rem;
@@ -2133,7 +2175,7 @@ body {
   position: relative;
   background-color: white;
   padding-top: 9rem;
-  margin-bottom: 15.75rem;
+  margin-bottom: 9.375rem;
 }
 
 .map_info::before {
@@ -2165,6 +2207,7 @@ body {
 
 .map_info__top .title-h2 {
   margin-bottom: 3.75rem;
+  color: #474A51;
 }
 
 .map_info__top .text {
@@ -2327,6 +2370,11 @@ body {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   border-radius: 50%;
+}
+
+.map_info__control .item__button:hover {
+  -webkit-animation: pulse 1500ms;
+          animation: pulse 1500ms;
 }
 
 .map_info__control .item__button .box {
@@ -2688,21 +2736,12 @@ body {
 }
 
 .map__bottom_items .item:hover {
-  padding: 1rem 1.5rem 1rem 3.25rem;
   background-color: #C97A66;
-}
-
-.map__bottom_items .item:hover .item__abs {
-  opacity: 0;
 }
 
 .map__bottom_items .item:hover .item__text,
 .map__bottom_items .item:hover .item__subtext {
   color: white;
-}
-
-.map__bottom_items .item:hover svg {
-  opacity: 1;
 }
 
 .map__bottom_items .item svg {
@@ -2786,6 +2825,7 @@ body {
 .message .title-h2 {
   max-width: 43.75rem;
   margin-bottom: 2.625rem;
+  color: #474A51;
 }
 
 .message .text {
