@@ -426,9 +426,10 @@ if(js_form) {
 			if(e.querySelector('.error-message') == null) {
 
 				e.querySelectorAll('input').forEach(input => input.value = "");
-				modal_message.classList.remove('active');
-
-				modal_success.classList.add('active');
+				modal_message.classList.remove('active')
+				
+				modal_phone.classList.remove('active')
+				modal_success.classList.add('active')
 			}
 
 		});
