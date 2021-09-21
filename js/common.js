@@ -241,13 +241,27 @@ const investment_section = () => {
 
 		on: {
 			init: function() {
-				console.log(this)
+				// console.log(this)
 				investment.querySelector('.page_control__count .first').innerHTML = this.realIndex + 1
 				investment.querySelector('.page_control__count .last').innerHTML = this.$.length + 1
 			},
 
 			activeIndexChange: function() {
 				investment.querySelector('.page_control__count .first').innerHTML = this.realIndex + 1
+			}
+		},
+
+		breakpoints: {
+			0: {
+				autoHeight: true
+			},
+
+			768: {
+				// autoHeight: true
+			},
+
+			1050: {
+				autoHeight: false
 			}
 		}
 	})
@@ -447,17 +461,29 @@ if(js_form) {
 
 			if(e.querySelector('.error-message') == null) {
 
-				e.querySelectorAll('input').forEach(input => input.value = "");
-				// modal_message.classList.remove('active')
-				
-				// modal_phone.classList.remove('active')
-				// modal_success.classList.add('active')
+				const request = new XMLHttpRequest();
+				request.onreadystatechange = function() { 
+					if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+						
+						modal_message.getAttribute('style', 'display: none;')
+						// fadeOut(modal_message, 500);
+						fadeOut(modal_phone, 500);
+						
+						fadeIn(modal_success, 500, 'flex');
 
-				modal_message.getAttribute('style', 'display: none;')
-				// fadeOut(modal_message, 500);
-				fadeOut(modal_phone, 500);
+						e.querySelectorAll('input').forEach(input => input.value = "");
+					}
+				}
 				
-				fadeIn(modal_success, 500, 'flex');
+				request.open(this.method, this.action, true);
+				request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+				
+				const data = new FormData(this);
+				
+
+					
+				request.send('name=' + encodeURIComponent(data.get('name')) + '&phone=' + encodeURIComponent(data.get('phone')) + '&email=' + encodeURIComponent(data.get('email')));
+
 			}
 
 		});
@@ -469,8 +495,7 @@ const layouts_section = () => {
 
 	const slider_layout_init = new Swiper(slider_layout.querySelector('.swiper'), {
 		loop: true,
-		slidesPerView: 'auto',
-  		spaceBetween: 28,
+		
 		observer: true,
 		observeParents: true,
 		centeredSlides: true,
@@ -485,10 +510,31 @@ const layouts_section = () => {
 			init: function() {
 				slider_layout.querySelector('.slider_nav__count .first').innerHTML = this.realIndex + 1
 				slider_layout.querySelector('.slider_nav__count .last').innerHTML = this.snapIndex
+
+				// mobile
+
+				slider_layout.querySelector('.page_count .first').innerHTML = this.realIndex + 1
+				slider_layout.querySelector('.page_count .last').innerHTML = this.$.length + 1
 			},
 
 			activeIndexChange: function() {
 				slider_layout.querySelector('.slider_nav__count .first').innerHTML = this.realIndex + 1
+
+				// mobile
+
+				slider_layout.querySelector('.page_count .first').innerHTML = this.realIndex + 1
+			}
+		},
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1.18,
+  				spaceBetween: 20,
+			},
+
+			768: {
+				slidesPerView: 'auto',
+  				spaceBetween: 28,
 			}
 		}
 	})
@@ -499,8 +545,7 @@ const gallery_section = () => {
 
 	const slider_gallery_init = new Swiper(slider_gallery.querySelector('.swiper'), {
 		loop: true,
-		slidesPerView: 'auto',
-  		spaceBetween: 0,
+		
 		observer: true,
 		observeParents: true,
 		centeredSlides: true,
@@ -517,11 +562,23 @@ const gallery_section = () => {
 		on: {
 			init: function() {
 				slider_gallery.querySelector('.page_control__count .first').innerHTML = this.realIndex + 1
-				slider_gallery.querySelector('.page_control__count .last').innerHTML = this.snapIndex
+				slider_gallery.querySelector('.page_control__count .last').innerHTML = this.$.length + 1
 			},
 
 			activeIndexChange: function() {
 				slider_gallery.querySelector('.page_control__count .first').innerHTML = this.realIndex + 1
+			}
+		},
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1.15,
+  				spaceBetween: 10,
+			},
+
+			768: {
+				slidesPerView: 'auto',
+  				spaceBetween: 0,
 			}
 		}
 	})
