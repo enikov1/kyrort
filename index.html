@@ -35,7 +35,7 @@
           <div class="header__bottom_control">
             <button class="button_accent js--modal-phone" type="button"><span>Оставить заявку</span></button>
             <button class="button_play" type="button" data-video="grgre343">
-              <div class="button_play__overlay"><img class="lazyload" data-src="img/svg/play.svg" src="#" alt="image"></div><span>Посмотреть ролик о жилом комплексе</span>
+              <div class="button_play__overlay"><img class="lazyload" data-src="img/play.png" src="#" alt="image"></div><span>Посмотреть ролик о жилом комплексе</span>
             </button>
           </div>
         </div>
@@ -150,15 +150,10 @@
         <div class="container">
           <h2 class="title-h2 font-sup">Стиль и <span>территория</span> комплекса</h2>
           <p class="text">Архитектурный код зданий выдержан в неоклассическом стиле. Изящные открытые балконы, малоэтажный принцип застройки, фасады из современных материалов, выполненные в цветовой гамме южного побережья, сохраняют полную гармонию Комплекса с окружающей природой.</p>
-          <div class="tabs">
-            <button class="tab active" type="button">стиль</button>
-            <button class="tab" type="button">ландшафт</button>
-            <button class="tab" type="button">виды</button>
-            <button class="tab" type="button">досуг</button>
-          </div>
+          <div class="tabs"><a class="tab active" href="#map_info_block">стиль</a><a class="tab" href="#map_info_block">ландшафт</a><a class="tab" href="#map_info_block">виды</a><a class="tab" href="#map_info_block">досуг</a></div>
         </div>
       </div>
-      <div class="map_info__bottom">
+      <div class="map_info__bottom" id="map_info_block">
         <div class="container-max">
           <div class="image"><img class="lazyload" data-src="img/section3/map.jpg" src="#" alt="image"></div>
           <div class="container">
@@ -225,7 +220,7 @@
 <path d="M4.50224 7.77593C5.08572 8.96881 6.05266 9.93135 7.24818 10.5094C7.33565 10.5508 7.4324 10.5688 7.52892 10.5615C7.62544 10.5542 7.71839 10.5219 7.79863 10.4677L9.55895 9.29392C9.63681 9.24201 9.72638 9.21034 9.81956 9.20178C9.91275 9.19322 10.0066 9.20804 10.0926 9.2449L13.3858 10.6563C13.4977 10.7038 13.5911 10.7864 13.652 10.8916C13.7128 10.9968 13.7378 11.119 13.7232 11.2396C13.6191 12.0541 13.2217 12.8028 12.6054 13.3454C11.9891 13.888 11.1961 14.1873 10.375 14.1874C7.83887 14.1874 5.40661 13.1799 3.61329 11.3866C1.81997 9.59325 0.8125 7.16099 0.8125 4.62486C0.812543 3.80373 1.11189 3.01077 1.65448 2.39446C2.19707 1.77814 2.94571 1.38073 3.76021 1.27664C3.88088 1.26204 4.00302 1.28705 4.10824 1.3479C4.21346 1.40875 4.29605 1.50215 4.34357 1.61402L5.75619 4.91012C5.79272 4.99538 5.80761 5.08835 5.79952 5.18075C5.79144 5.27315 5.76062 5.36212 5.70983 5.43973L4.54008 7.22706C4.48684 7.30746 4.45537 7.4003 4.44874 7.4965C4.4421 7.5927 4.46054 7.68898 4.50224 7.77593V7.77593Z" stroke="#5C5C5C" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
             </div>
-            <input class="field mask--phone js_phone" type="text" name="phone" placeholder="+7 (999) 999-99-99">
+            <input class="field mask--phone js_phone" type="tel" name="phone" placeholder="+7 (999) 999-99-99">
           </div>
           <div class="field-button">
             <button class="button_accent" type="submit"><span class="first">получить консультацию</span><span class="last">оставить заявку</span></button><span>Нажимая на кнопку, вы даёте согласие на обработку персональных данных </span>
@@ -322,9 +317,18 @@
       </div>
       <div class="gallery__bottom">
         <div class="swiper">
-          <div class="swiper-wrapper" id="lightgallery"><a class="swiper-slide" data-src="img/gallery/item1.jpg"><img src="img/gallery/item1.jpg" alt="image">
-              <p class="text">Все дома строятся в едином стиле, присущем курортам южной части Европы.</p></a><a class="swiper-slide" data-src="img/gallery/item2.jpg"><img src="img/gallery/item2.jpg" alt="image">
-              <p class="text">Все дома строятся в едином стиле, присущем курортам южной части Европы.</p></a><a class="swiper-slide" data-src="img/gallery/item3.jpg"><img src="img/gallery/item3.jpg" alt="image">
+          <div class="swiper-wrapper" id="lightgallery"><a class="swiper-slide" data-src="img/gallery/item1.jpg">
+              <picture>
+                <source srcset="img/gallery/item1_smart.jpg" media="(max-width: 540px)"><img src="img/gallery/item1.jpg" alt="image">
+              </picture>
+              <p class="text">Все дома строятся в едином стиле, присущем курортам южной части Европы.</p></a><a class="swiper-slide" data-src="img/gallery/item2.jpg">
+              <picture>
+                <source srcset="img/gallery/item2_smart.jpg" media="(max-width: 540px)"><img src="img/gallery/item2.jpg" alt="image">
+              </picture>
+              <p class="text">Все дома строятся в едином стиле, присущем курортам южной части Европы.</p></a><a class="swiper-slide" data-src="img/gallery/item3.jpg">
+              <picture>
+                <source srcset="img/gallery/item3_smart.jpg" media="(max-width: 540px)"><img src="img/gallery/item3.jpg" alt="image">
+              </picture>
               <p class="text">Все дома строятся в едином стиле, присущем курортам южной части Европы.</p></a></div>
         </div>
       </div>
@@ -345,7 +349,7 @@
       <div class="map__bottom">
         <div class="overlay">
           <picture>
-            <source class="lazyload" data-srcset="img/map_smart.jpg" media="(max-width: 768px)"><img class="lazyload" data-src="img/map.jpg" src="#" alt="image">
+            <source class="lazyload" data-srcset="img/map_smart.svg" media="(max-width: 768px)"><img class="lazyload" data-src="img/map.jpg" src="#" alt="image">
           </picture>
         </div>
         <div class="map__bottom_items">
@@ -509,7 +513,7 @@
 <path d="M4.50224 7.77593C5.08572 8.96881 6.05266 9.93135 7.24818 10.5094C7.33565 10.5508 7.4324 10.5688 7.52892 10.5615C7.62544 10.5542 7.71839 10.5219 7.79863 10.4677L9.55895 9.29392C9.63681 9.24201 9.72638 9.21034 9.81956 9.20178C9.91275 9.19322 10.0066 9.20804 10.0926 9.2449L13.3858 10.6563C13.4977 10.7038 13.5911 10.7864 13.652 10.8916C13.7128 10.9968 13.7378 11.119 13.7232 11.2396C13.6191 12.0541 13.2217 12.8028 12.6054 13.3454C11.9891 13.888 11.1961 14.1873 10.375 14.1874C7.83887 14.1874 5.40661 13.1799 3.61329 11.3866C1.81997 9.59325 0.8125 7.16099 0.8125 4.62486C0.812543 3.80373 1.11189 3.01077 1.65448 2.39446C2.19707 1.77814 2.94571 1.38073 3.76021 1.27664C3.88088 1.26204 4.00302 1.28705 4.10824 1.3479C4.21346 1.40875 4.29605 1.50215 4.34357 1.61402L5.75619 4.91012C5.79272 4.99538 5.80761 5.08835 5.79952 5.18075C5.79144 5.27315 5.76062 5.36212 5.70983 5.43973L4.54008 7.22706C4.48684 7.30746 4.45537 7.4003 4.44874 7.4965C4.4421 7.5927 4.46054 7.68898 4.50224 7.77593V7.77593Z" stroke="#5C5C5C" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                 </div>
-                <input class="field mask--phone js_phone" type="text" name="phone" placeholder="+7 (999) 999-99-99">
+                <input class="field mask--phone js_phone" type="tel" name="phone" placeholder="+7 (999) 999-99-99">
               </div>
               <div class="field-button">
                 <button class="button_accent" type="submit"><span class="first">получить консультацию</span><span class="last">оставить заявку</span></button><span>Нажимая на кнопку, вы даёте согласие на обработку персональных данных </span>
@@ -569,7 +573,7 @@
 <path d="M5.22471 7.75084C5.87302 9.07626 6.94739 10.1458 8.27575 10.788C8.37294 10.8341 8.48045 10.854 8.58769 10.8459C8.69493 10.8378 8.79822 10.8019 8.88737 10.7417L10.8433 9.4375C10.9298 9.37982 11.0293 9.34463 11.1328 9.33512C11.2364 9.32561 11.3407 9.34208 11.4362 9.38303L15.0954 10.9512C15.2197 11.004 15.3234 11.0958 15.3911 11.2127C15.4587 11.3296 15.4865 11.4653 15.4702 11.5994C15.3546 12.5044 14.913 13.3362 14.2282 13.9391C13.5434 14.542 12.6624 14.8746 11.75 14.8746C8.93207 14.8746 6.22956 13.7552 4.23699 11.7627C2.24442 9.77008 1.125 7.06757 1.125 4.24965C1.12505 3.33729 1.45765 2.45622 2.06053 1.77143C2.66341 1.08663 3.49523 0.64507 4.40023 0.529415C4.53431 0.51319 4.67002 0.540976 4.78693 0.608588C4.90384 0.6762 4.99561 0.779975 5.04841 0.904277L6.61798 4.56661C6.65858 4.66134 6.67512 4.76464 6.66614 4.86731C6.65715 4.96998 6.62291 5.06883 6.56647 5.15507L5.26676 7.14098C5.2076 7.23032 5.17263 7.33347 5.16526 7.44037C5.15789 7.54726 5.17837 7.65423 5.22471 7.75084V7.75084Z" stroke="#D9D9D9" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
             </div>
-            <input class="field mask--phone js_phone" type="text" name="phone" placeholder="+7 (999) 999-99-99">
+            <input class="field mask--phone js_phone" type="tel" name="phone" placeholder="+7 (999) 999-99-99">
           </div>
           <div class="field-button">
             <button class="button_accent" type="submit"><span>получить консультацию</span></button><span class="text">Нажимая на кнопку, вы даёте <span>согласие на обработку персональных данных</span> и соглашаетесь с политикой конфиденциальности</span>

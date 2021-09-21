@@ -230,6 +230,10 @@ const investment_section = () => {
 		observeParents: true,
 
 		effect: 'fade',
+
+		onlyExternal: true,
+		noSwiping: true,
+		allowTouchMove: false,
 		fadeEffect: {
 			crossFade: true
 		},
@@ -272,6 +276,11 @@ const investment_section = () => {
 		observeParents: true,
 
 		effect: 'fade',
+
+		onlyExternal: true,
+		noSwiping: true,
+		allowTouchMove: false,
+
 		fadeEffect: {
 			crossFade: true
 		},
@@ -341,7 +350,7 @@ const remove_class_error = (element) => {
 const add_message_error = (element) => {
 	let error_element = document.createElement('span');
 	error_element.classList.add('error-message');
-	error_element.innerHTML = 'Данные введены некорректно';
+	error_element.innerHTML = '*Данные введены некорректно';
 
 	if(element.parentNode.querySelector('.error-message') == null) {
 		element.insertAdjacentElement('afterEnd', error_element);
@@ -486,7 +495,7 @@ if(js_form) {
 
 			}
 
-		});
+		});	
 	});
 }
 

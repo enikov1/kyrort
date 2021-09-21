@@ -435,6 +435,12 @@ body {
     max-width: 100%;
   }
   .footer__top_left .block_list:nth-of-type(2) {
+    padding-left: 1.25rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer__top_left .block_list:nth-of-type(2) {
     padding-left: 0;
   }
 }
@@ -696,7 +702,9 @@ body {
 @media (max-width: 899px) {
   .header {
     z-index: 4;
-    height: auto;
+    height: 46.25rem;
+    background: url(../img/header_bg.jpg) no-repeat 39% 100%;
+    background-size: cover;
     margin-bottom: 4.375rem;
     padding-bottom: 3rem;
   }
@@ -882,6 +890,12 @@ body {
   padding-top: 15.625rem;
 }
 
+@media (max-width: 767px) {
+  .header__bottom {
+    padding-top: 11.25rem;
+  }
+}
+
 .header__bottom .container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -971,7 +985,7 @@ body {
     -webkit-order: 1;
         -ms-flex-order: 1;
             order: 1;
-    margin-top: 8.25rem;
+    margin-top: 13.125rem;
   }
 }
 
@@ -997,6 +1011,11 @@ body {
     -webkit-order: 0;
         -ms-flex-order: 0;
             order: 0;
+    -webkit-align-self: baseline;
+        -ms-flex-item-align: baseline;
+            align-self: baseline;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1336,7 +1355,7 @@ body {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-left: 2rem;
+  margin-left: auto;
   margin-top: 3.625rem;
 }
 
@@ -1344,6 +1363,7 @@ body {
   .slide_menu__wrap {
     width: 100%;
     margin-top: 2rem;
+    padding-left: 2rem;
   }
 }
 
@@ -1354,6 +1374,9 @@ body {
 @media (max-width: 767px) {
   .slide_menu__logo {
     margin-bottom: 3.25rem;
+    -webkit-align-self: baseline;
+        -ms-flex-item-align: baseline;
+            align-self: baseline;
   }
 }
 
@@ -1967,7 +1990,7 @@ body {
 
 @media (max-width: 540px) {
   .gallery__bottom img {
-    height: 13.125rem;
+    height: 13.75rem;
   }
 }
 
@@ -3857,7 +3880,7 @@ body {
 @media (min-width: 1050px) {
   .map_info__control .item {
     position: absolute;
-    z-index: 2;
+    z-index: 5;
   }
   .map_info__control .item__button {
     position: absolute;
@@ -3929,7 +3952,7 @@ body {
     height: 11.8125rem;
     background-color: #433632;
   }
-  .map_info__control .item__info_top .swiper-slide img {
+  .map_info__control .item__info_top img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
@@ -4291,7 +4314,7 @@ body {
 
 @media (max-width: 767px) {
   .map__bottom .overlay img {
-    height: calc(100% - 19px);
+    height: calc(100% - 20px);
     -o-object-position: -379px;
        object-position: -379px;
   }
