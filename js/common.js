@@ -521,9 +521,9 @@ const layouts_section = () => {
 				slider_layout.querySelector('.slider_nav__count .last').innerHTML = this.snapIndex
 
 				// mobile
-
+				console.log(this)
 				slider_layout.querySelector('.page_count .first').innerHTML = this.realIndex + 1
-				slider_layout.querySelector('.page_count .last').innerHTML = this.$.length + 1
+				slider_layout.querySelector('.page_count .last').innerHTML = this.slides.length - 4
 			},
 
 			activeIndexChange: function() {
@@ -638,6 +638,10 @@ lightGallery(document.getElementById('lightgallery'), {
 		// counter: false,
 		captions: false,
 		download: false,
+
+		mobileSettings: {
+			showCloseIcon: true,
+		}
 		// enableSwipe: false,
 		// enableDrag: false,
 		// pager: false,
