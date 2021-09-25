@@ -521,7 +521,7 @@ const layouts_section = () => {
 				slider_layout.querySelector('.slider_nav__count .last').innerHTML = this.snapIndex
 
 				// mobile
-				console.log(this)
+				// console.log(this)
 				slider_layout.querySelector('.page_count .first').innerHTML = this.realIndex + 1
 				slider_layout.querySelector('.page_count .last').innerHTML = this.slides.length - 4
 			},
@@ -571,7 +571,8 @@ const gallery_section = () => {
 		on: {
 			init: function() {
 				slider_gallery.querySelector('.page_control__count .first').innerHTML = this.realIndex + 1
-				slider_gallery.querySelector('.page_control__count .last').innerHTML = this.$.length + 1
+				slider_gallery.querySelector('.page_control__count .last').innerHTML = this.loopedSlides
+				// console.log(this)
 			},
 
 			activeIndexChange: function() {
@@ -581,7 +582,7 @@ const gallery_section = () => {
 
 		breakpoints: {
 			0: {
-				slidesPerView: 1.15,
+				slidesPerView: 'auto',
   				spaceBetween: 10,
 			},
 

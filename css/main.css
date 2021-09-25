@@ -1908,6 +1908,7 @@ body {
 @media (max-width: 767px) {
   .gallery__bottom .swiper-slide {
     height: 26.375rem;
+    width: 86%;
   }
 }
 
@@ -3402,7 +3403,6 @@ body {
 }
 
 .layouts__item_image img {
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }

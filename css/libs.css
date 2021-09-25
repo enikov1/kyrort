@@ -927,12 +927,18 @@ button.swiper-pagination-bullet {
           flex-shrink: 0;
   margin-top: auto;
   margin-bottom: auto;
-  width: 60%;
+  width: 60rem;
   border-radius: 4px;
   background: #fff;
   opacity: 1;
   cursor: auto;
   will-change: transform, opacity;
+}
+
+@media (max-width: 1050px) {
+  .tingle-modal-box {
+    width: 80%;
+  }
 }
 
 .tingle-modal-box__content {
@@ -1120,6 +1126,16 @@ button.swiper-pagination-bullet {
     opacity: 1;
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+}
+
+.yt_video {
+  height: 33.75rem;
+}
+
+@media (max-width: 767px) {
+  .yt_video {
+    height: 18.75rem;
   }
 }
 
