@@ -566,8 +566,8 @@ const gallery_section = () => {
 		// loadPrevNext: true,
 
 		navigation: {
-			nextEl: slider_gallery.querySelector('.nav_prev'),
-			prevEl: slider_gallery.querySelector('.nav_next'),
+			nextEl: slider_gallery.querySelector('.nav_next'),
+			prevEl: slider_gallery.querySelector('.nav_prev'),
 		},
 
 		on: {
@@ -656,7 +656,7 @@ const map_smart_block = document.querySelector('.map__smart_block')
 
 map_bottom_items.forEach(e => {
 	if(!e.classList.contains('active_')) {
-		e.addEventListener('click', function (event) {
+		e.addEventListener('mouseover', function (event) {
 			event.preventDefault()
 
 			for (let item of this.parentNode.children) {

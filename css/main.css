@@ -1925,6 +1925,7 @@ body {
 
 .gallery__bottom .container .nav_prev {
   margin-left: 1.5625rem;
+  left: 0;
 }
 
 @media (max-width: 767px) {
@@ -1941,6 +1942,7 @@ body {
 
 .gallery__bottom .container .nav_next {
   margin-right: 1.5625rem;
+  right: 0;
 }
 
 @media (max-width: 1200px) {
@@ -1962,6 +1964,8 @@ body {
 }
 
 .gallery__bottom .container .nav_prev, .gallery__bottom .container .nav_next {
+  position: absolute;
+  top: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
