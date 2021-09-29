@@ -4529,6 +4529,7 @@ body {
 }
 
 .map__bottom_items .item {
+  cursor: pointer;
   position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
