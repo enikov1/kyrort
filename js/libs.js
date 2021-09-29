@@ -125,7 +125,7 @@ const slider_info_section = () => {
 }
 
 const modal_video_init = (id, element) => {
-	element.setContent(`<iframe class="yt_video" width="100%" src="https://www.youtube.com/embed/${id}?autoplay=1&controls=0&showinfo=0&rel=0&vq=hd720?version=3&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay="1"></iframe>`);
+	element.setContent(`<iframe class="yt_video" width="100%" height="540" src="https://www.youtube.com/embed/${id}?autoplay=1&controls=0&showinfo=0&rel=0&vq=hd720?version=3&enablejsapi=1" frameborder="0"></iframe>`);
 	element.open();
 }
 
@@ -566,8 +566,8 @@ const gallery_section = () => {
 		// loadPrevNext: true,
 
 		navigation: {
-			nextEl: slider_gallery.querySelector('.page_control__next'),
-			prevEl: slider_gallery.querySelector('.page_control__prev'),
+			nextEl: slider_gallery.querySelector('.nav_prev'),
+			prevEl: slider_gallery.querySelector('.nav_next'),
 		},
 
 		on: {
@@ -650,6 +650,28 @@ lightGallery(document.getElementById('lightgallery'), {
 	// pager: false,
 	// controls: false,
 })
+
+const map_bottom_items = document.querySelectorAll('.map__bottom_items .item')
+const map_smart_block = document.querySelector('.map__smart_block')
+
+map_bottom_items.forEach(e => {
+	if(!e.classList.contains('active_')) {
+		e.addEventListener('click', function (event) {
+			event.preventDefault()
+
+			for (let item of this.parentNode.children) {
+				item.classList.remove('active');
+			}
+
+			this.classList.add('active')
+
+			map_smart_block.querySelector('.title-h2').innerHTML = e.querySelector('.item__text').innerHTML
+			map_smart_block.querySelector('.text').innerHTML = e.querySelector('.item__toggle').innerHTML
+		})
+	}
+	
+})
+
 
 onScrollHeader()
 

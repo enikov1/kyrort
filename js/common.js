@@ -158,25 +158,6 @@ const video_play = () => {
 }
 
 const section_map_info = () => {
-	// const slider_mapinfo = document.querySelectorAll('.swiper-mapinfo')
-
-	// slider_mapinfo.forEach(slider => {
-	// 	const slider_mapinfo_init = new Swiper(slider.querySelector('.swiper'), {
-	// 		loop: true,
-	// 		observer: true,
-	// 		observeParents: true,
-
-	// 		pagination: {
-	// 			el: slider.querySelector('.swiper-nav'),
-	// 			// dynamicBullets: true,
-	// 		},
-	// 		navigation: {
-	// 			nextEl: slider.querySelector('.swiper-page__next'),
-	// 			prevEl: slider.querySelector('.swiper-page__prev'),
-	// 		},
-	// 	})
-	// })
-
 
 	const tab_items = document.querySelectorAll('.map_info .tab')
 	const map_items = document.querySelectorAll('.map_info__control .item')
@@ -597,7 +578,7 @@ const gallery_section = () => {
 scrollSpy('.slide_menu__nav', {
     sectionSelector: '[data-scroll-block]',
     targetSelector: 'a',
-    offset: 400,
+    offset: 200,
     activeClass: 'active',
 });
 
